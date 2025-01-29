@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 
 export default function PriceList() {
   const services = {
@@ -54,12 +54,18 @@ export default function PriceList() {
       items: [
         { name: "Офлайн с последующей записью", price: "0₽" },
         { name: "Офлайн без последующей записи", price: "1000₽" },
-        { name: "Офлайн с подбором домашнего ухода (без записи)", price: "1500₽" },
-        { name: "Онлайн консультация (с подбором домашнего ухода)", price: "1000₽" },
+        {
+          name: "Офлайн с подбором домашнего ухода (без записи)",
+          price: "1500₽",
+        },
+        {
+          name: "Онлайн консультация (с подбором домашнего ухода)",
+          price: "1000₽",
+        },
         { name: "Разбор анализов", price: "1500₽" },
       ],
     },
-  }
+  };
 
   return (
     <div className="w-full max-w-3xl mx-auto">
@@ -76,8 +82,12 @@ export default function PriceList() {
         <div className="absolute inset-0 flex flex-col items-center justify-center text-black">
           <h1 className="text-5xl font-tenor tracking-widest mb-2">ESTETICA</h1>
           <div className="w-16 h-px bg-black/70 mx-auto mb-4" />
-          <h2 className="text-2xl font-tenor tracking-wider mb-3">ПРАЙС ЛИСТ</h2>
-          <p className="text-sm tracking-wide font-light">ул. Конституции СССР, 24А</p>
+          <h2 className="text-2xl font-tenor tracking-wider mb-3">
+            ПРАЙС ЛИСТ
+          </h2>
+          <p className="text-sm tracking-wide font-light">
+            ул. Конституции СССР, 24А
+          </p>
         </div>
       </div>
 
@@ -101,27 +111,39 @@ export default function PriceList() {
           {/* Services Sections */}
           {Object.values(services).map((section, index) => (
             <div key={index} className="mb-12">
-              <h2 className="text-2xl font-tenor mb-1 text-gray-800 tracking-wide">{section.titleEn}</h2>
-              <h3 className="text-sm text-gray-500 mb-6 font-light tracking-wider">{section.title}</h3>
+              <h2 className="text-2xl font-tenor mb-1 text-gray-800 tracking-wide">
+                {section.titleEn}
+              </h2>
+              <h3 className="text-sm text-gray-500 mb-6 font-light tracking-wider">
+                {section.title}
+              </h3>
               <div className="space-y-4">
                 {section.items.map((service, serviceIndex) => (
-                  <div key={serviceIndex} className="flex justify-between items-center">
-                    <span className="text-gray-700 font-light max-w-[70%]">{service.name}</span>
-                    <span className="text-gray-900 font-light">{service.price}</span>
+                  <div
+                    key={serviceIndex}
+                    className="flex justify-between items-center"
+                  >
+                    <span className="text-gray-700 font-light max-w-[70%]">
+                      {service.name}
+                    </span>
+                    <span className="text-gray-900 font-light">
+                      {service.price}
+                    </span>
                   </div>
                 ))}
               </div>
-              {index < Object.values(services).length - 1 && <div className="my-8 w-full h-px bg-gray-200" />}
+              {index < Object.values(services).length - 1 && (
+                <div className="my-8 w-full h-px bg-gray-200" />
+              )}
             </div>
           ))}
 
           {/* Footer */}
           <div className="text-center text-gray-400 text-sm mt-12">
-            <p>@cosmo_madi_</p>
+            <p>@li.estett</p>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
-
