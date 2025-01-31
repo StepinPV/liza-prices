@@ -4,7 +4,6 @@ export default function PriceList() {
   const services = {
     lipContour: {
       title: "Контурная пластика губ",
-      titleEn: "Lip contouring",
       items: [
         { name: "E.p.t.q Корея", price: "9500₽" },
         { name: "Neuramis Корея", price: "9500₽" },
@@ -21,7 +20,6 @@ export default function PriceList() {
     },
     faceContour: {
       title: "Контурная пластика лица",
-      titleEn: "Face contouring",
       items: [
         { name: "E.p.t.q Корея", price: "9500₽" },
         { name: "Neuramis Корея", price: "9500₽" },
@@ -37,7 +35,6 @@ export default function PriceList() {
     },
     mesoSkinasil: {
       title: "Мезотерапия Skinasil Россия",
-      titleEn: "Mesotherapy Skinasil Russia",
       items: [
         {
           name: "PDRN booster - Омоложение, восстановление и глубокое увлажнение на клеточном уровне",
@@ -91,7 +88,6 @@ export default function PriceList() {
     },
     mesoInfini: {
       title: "Мезотерапия Infini Premium Италия",
-      titleEn: "Mesotherapy Infini Premium Italy",
       items: [
         {
           name: "S - увлажняет, улучшает цвет лица и поддерживает молодость. Подходит для усиления эффектов других процедур. для быстрого восстановления обезвоженной и сухой кожи",
@@ -153,7 +149,6 @@ export default function PriceList() {
     },
     botox: {
       title: "Ботулотоксин",
-      titleEn: "Botulinum toxin",
       items: [
         { name: "Диспорт Франция", price: "200₽/ед" },
         { name: "Рефайнекс Япония", price: "210₽/ед" },
@@ -162,7 +157,6 @@ export default function PriceList() {
     },
     lipolytics: {
       title: "Липолитики",
-      titleEn: "Lipolytics",
       items: [
         { name: "Biogel Стройность 2мл", price: "8500₽" },
         { name: "LEMON BOTTLE 5мл", price: "5500₽" },
@@ -171,7 +165,6 @@ export default function PriceList() {
     },
     consultations: {
       title: "Консультации",
-      titleEn: "Consultations",
       items: [
         { name: "Офлайн с последующей записью", price: "0₽" },
         { name: "Офлайн без последующей записи", price: "1000₽" },
@@ -232,12 +225,9 @@ export default function PriceList() {
           {/* Services Sections */}
           {Object.values(services).map((section, index) => (
             <div key={index} className="mb-12">
-              <h2 className="text-2xl font-tenor mb-1 text-gray-800 tracking-wide">
-                {section.titleEn}
-              </h2>
-              <h3 className="text-sm text-gray-500 mb-6 font-light tracking-wider">
+              <h2 className="text-2xl font-tenor text-gray-800 tracking-wide mb-6">
                 {section.title}
-              </h3>
+              </h2>
               <div className="space-y-4">
                 {section.items.map((service, serviceIndex) => {
                   // Разделяем название и описание по дефису
